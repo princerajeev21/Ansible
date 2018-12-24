@@ -1,31 +1,29 @@
-[webservers-apache]
-web-ubuntu-1
-web-centos-1
-web-suse-1
-web-redhat-1
-web-iis-server2012-1
-web-iis-server2016-1
+[webservers-centos]
+  centos1
+  centos2
+  
+[webservers-ubuntu]
+  apache:
+    ubuntu-apache-1
+  nginx:
+    ubuntu-nginx-1
 
-[webservers-nginx]
-web-ubuntu-2
-web-ubuntu-3
-web-centos-2
-web-suse-2
-web-redhat-2
-web-iis-server2012-2
-web-iis-server2016-2
+[webservers-windowsvr2012]
+windowssvr-iis
 
 
 [dbservers]
-ubuntu-mysql
-centos-mysql
-ubuntu-postgresql
-ubuntu-mariadb
-centos-postgresql
-centos-mariadb
+  mysql:
+    centos-mysql
+  mariadb:
+    centos-mariadb
+  postgresql:
+    centos-postgresql
 
 
 [dev-servers]
-ubuntu-python
-centos-python
+  dev-ubuntu:
+    ubuntu-python
+  dev-centos:
+    centos-python
 
