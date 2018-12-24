@@ -1,0 +1,21 @@
+---
+- hosts: webservers-centos
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+  vars:
+    username: rajiv
+  tasks:
+    -name: install apache web server
+     yum:
+      name: httpd
+      state: latest
+     notify:
+      -startservice
+   handlers:
+    -name: statservice
+     service:
+      name: httpd
+      state: restarted
